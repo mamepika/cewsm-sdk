@@ -34,7 +34,6 @@ public class EWSCommonMessageDecoder {
         for(int i =0; i < messages.size();i++){
             binaryString.append(String.format("%4s",Integer.toBinaryString(Integer.parseInt(messages.get(i),16))).replace(" ","0"));
         }
-        System.out.println(binaryString.toString());
         return binaryString.toString();
     }
 
