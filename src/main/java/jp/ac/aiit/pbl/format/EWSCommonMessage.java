@@ -1,4 +1,8 @@
 package jp.ac.aiit.pbl.format;
 
-public class EWSCommonMessage {
+import jp.ac.aiit.pbl.format.prefix.Prefix;
+
+public interface EWSCommonMessage {
+
+    public Prefix getPrefix();
 }

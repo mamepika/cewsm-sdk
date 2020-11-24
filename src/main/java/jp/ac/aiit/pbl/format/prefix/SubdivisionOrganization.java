@@ -1,4 +1,4 @@
 package jp.ac.aiit.pbl.format.prefix;
 
-public enum OrganizationCode {
+public enum SubdivisionOrganization {
 }
