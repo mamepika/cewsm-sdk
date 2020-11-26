@@ -1,9 +1,9 @@
 package jp.ac.aiit.pbl.format.sep2020;
 
-import jp.ac.aiit.pbl.format.EWSCommonMessage;
+import jp.ac.aiit.pbl.format.CommonEWSMessage;
 import jp.ac.aiit.pbl.format.prefix.Prefix;
 
-public class EWSSeptember2020 implements EWSCommonMessage {
+public class EWSSeptember2020 implements CommonEWSMessage {
 
     private Prefix prefix;
 

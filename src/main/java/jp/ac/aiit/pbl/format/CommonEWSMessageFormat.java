@@ -1,6 +1,6 @@
 package jp.ac.aiit.pbl.format;
 
-public enum EWSCommonMessageFormat {
+public enum CommonEWSMessageFormat {
     NOSHIRO,
     SEPTEMBER2020
 }

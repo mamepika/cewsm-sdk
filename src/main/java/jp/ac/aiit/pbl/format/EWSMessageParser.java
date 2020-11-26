@@ -2,5 +2,5 @@ package jp.ac.aiit.pbl.format;
 
 public interface EWSMessageParser {
 
-    public EWSCommonMessage parse(String ewsCommonMessage);
+    public CommonEWSMessage parse(String ewsCommonMessage);
 }

@@ -1,10 +1,8 @@
 package jp.ac.aiit.pbl.format.sep2020;
 
-import jp.ac.aiit.pbl.format.EWSCommonMessage;
+import jp.ac.aiit.pbl.format.CommonEWSMessage;
 import jp.ac.aiit.pbl.format.EWSMessageParser;
 import jp.ac.aiit.pbl.format.prefix.PrefixParser;
-
-import java.text.Normalizer;
 
 public class EWSSeptember2020Parser implements EWSMessageParser {
 
@@ -37,7 +35,7 @@ public class EWSSeptember2020Parser implements EWSMessageParser {
 
     }
 
-    public EWSCommonMessage parse(String ewsCommonMessage){
+    public CommonEWSMessage parse(String ewsCommonMessage){
         EWSSeptember2020 september2020 = new EWSSeptember2020();
         PrefixParser prefixParser = new PrefixParser();
         september2020.setPrefix(prefixParser.parse(ewsCommonMessage));
