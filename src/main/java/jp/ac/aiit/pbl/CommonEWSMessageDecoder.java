@@ -8,11 +8,11 @@ import jp.ac.aiit.pbl.format.EWSMessageParserFactory;
 import java.util.Arrays;
 import java.util.List;
 
-public class EWSCommonMessageDecoder {
+public class CommonEWSMessageDecoder {
 
     private EWSMessageParser parser;
 
-    public EWSCommonMessageDecoder(CommonEWSMessageFormat format){
+    public CommonEWSMessageDecoder(CommonEWSMessageFormat format){
         this.parser = EWSMessageParserFactory.create(format);
     }
 
