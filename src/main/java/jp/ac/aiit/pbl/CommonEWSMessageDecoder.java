@@ -36,6 +36,4 @@ public class CommonEWSMessageDecoder {
         }
         return binaryString.toString();
     }
-
-
 }
