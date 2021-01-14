@@ -36,8 +36,6 @@ public class PrefixParser {
         Prefix prefix = new Prefix();
         prefix.setPreamble(Preamble.getById(Format.PREAMBLE.signalValue(ewsCommonMessage)));
         prefix.setMessageType(MessageType.getById(Integer.parseInt(Format.MESSAGE_TYPE.signalValue(ewsCommonMessage),2)));
-        prefix.setReportClassification(ReportClassification.getById(Integer.parseInt(Format.REPORT_CLASSIFICATION.signalValue(ewsCommonMessage),2)));
-        prefix.setOrganizationCode(Organization.getById(Integer.parseInt(Format.ORGANIZATION.signalValue(ewsCommonMessage),2)));
         return prefix;
 
     }

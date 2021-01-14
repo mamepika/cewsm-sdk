@@ -9,6 +9,13 @@ public class CommonEWSMessageDecoderTest {
     public void test(){
         CommonEWSMessageDecoder decoder = new CommonEWSMessageDecoder(CommonEWSMessageFormat.SEPTEMBER2020);
         System.out.println();
-        System.out.println(decoder.decode("9AB3F800000000223AE553D1C01200170807DE00000000000000000"));
+        System.out.println(decoder.decode("9AB0620188B10200B2A2E3602A8000004000000000000000000000004000004"));
+    }
+
+    @Test
+    public void test2(){
+        CommonEWSMessageDecoder decoder = new CommonEWSMessageDecoder(CommonEWSMessageFormat.SEPTEMBER2020);
+        System.out.println();
+        System.out.println(decoder.decode("C6B0620000B18200B2BDE363198000004000000000000000000000004000004"));
     }
 }
