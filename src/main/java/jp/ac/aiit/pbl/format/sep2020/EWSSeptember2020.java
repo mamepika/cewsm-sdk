@@ -19,7 +19,7 @@ public class EWSSeptember2020 implements CommonEWSMessage {
 
     private EventOnset eventOnset;
 
-    private GeneralGuidanceToReact guidanceToReact;
+    private GuidanceToReact guidanceToReact;
 
     private Double latitude;
 
@@ -87,11 +87,11 @@ public class EWSSeptember2020 implements CommonEWSMessage {
         this.eventOnset = eventOnset;
     }
 
-    public GeneralGuidanceToReact getGuidanceToReact() {
+    public GuidanceToReact getGuidanceToReact() {
         return guidanceToReact;
     }
 
-    public void setGuidanceToReact(GeneralGuidanceToReact guidanceToReact) {
+    public void setGuidanceToReact(GuidanceToReact guidanceToReact) {
         this.guidanceToReact = guidanceToReact;
     }
 

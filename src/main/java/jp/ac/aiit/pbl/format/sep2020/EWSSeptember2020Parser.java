@@ -60,7 +60,9 @@ public class EWSSeptember2020Parser implements EWSMessageParser {
         september2020.setEvent(Event.getById(Format.EVENT.signalValue(message)));
         september2020.setSeverity(Severity.getById(Format.SEVERITY.signalValue(message)));
         september2020.setEventOnset(new EventOnset(Format.EVENT_ONSET.signalValue(message)));
-        september2020.setProvider(Format.GUIDANCE_LIBRARY.signalValue(message));
+        september2020.setProvider(Format.PROVIDER.signalValue(message));
+        Guidance guidance = new Guidance(Integer.toString(Integer.parseInt(Format.COUNTRY.signalValue(message),2)),Format.GUIDANCE_LIBRARY.signalValue(message));
+        september2020.setGuidanceToReact(guidance.getById(Format.GUIDANCE_TO_REACT.signalValue(message)));
         september2020.setGuidanceToReact(GeneralGuidanceToReact.getById(Format.GUIDANCE_TO_REACT.signalValue(message)));
         september2020.setLatitude(Coordinate.calcLatitude(Format.LATITUDE.signalValue(message)));
         september2020.setLongitude(Coordinate.calcLongitude(Format.LONGITUDE.signalValue(message)));
