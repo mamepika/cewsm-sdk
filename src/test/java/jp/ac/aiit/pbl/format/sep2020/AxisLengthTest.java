@@ -10,11 +10,11 @@ public class AxisLengthTest {
     @Test
     public void inCaseOfMinimumValue(){
         AxisLength axisLength = AxisLength.getById("0000");
-        Assert.assertThat(316.0, is(axisLength.getLength()));
+        Assert.assertThat(316L, is(axisLength.getLength()));
     }
     @Test
     public void inCaseOfMaximumValue(){
         AxisLength axisLength = AxisLength.getById("1111");
-        Assert.assertThat(1.1103363E7, is(axisLength.getLength()));
+        Assert.assertThat(11103363L, is(axisLength.getLength()));
     }
 }
