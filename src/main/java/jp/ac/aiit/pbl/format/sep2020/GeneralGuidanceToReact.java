@@ -3,7 +3,7 @@ package jp.ac.aiit.pbl.format.sep2020;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public enum GeneralGuidanceToReact {
+public enum GeneralGuidanceToReact implements GuidanceToReact{
 
     EVACUATE_URBAN_AREAS("00000000","Evacuate – Evacuate as instructed in the <instruction>","Urban areas"),
     EVACUATE_BUILDING("00000001","Evacuate – Evacuate as instructed in the <instruction>","Building"),
@@ -45,7 +45,7 @@ public enum GeneralGuidanceToReact {
 
     private String instructions;
 
-    private GeneralGuidanceToReact(String id, String responseType, String instructions){
+    GeneralGuidanceToReact(String id, String responseType, String instructions){
         this.id = id;
         this.responseType = responseType;
         this.instructions = instructions;
@@ -55,6 +55,16 @@ public enum GeneralGuidanceToReact {
         return  id;
     }
 
+    @Override
+    public String getResponseType() {
+        return responseType;
+    }
+
+    @Override
+    public String getInstruction() {
+        return instructions;
+    }
+
     public static GeneralGuidanceToReact getById(String id){
         return Arrays.stream(GeneralGuidanceToReact.values())
                 .filter(data -> data.getId().equals(id))
@@ -62,4 +72,11 @@ public enum GeneralGuidanceToReact {
                 .orElse(null);
     }
 
+    @Override
+    public GuidanceToReact getById() {
+        return Arrays.stream(GeneralGuidanceToReact.values())
+                .filter(data -> data.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+    }
 }
