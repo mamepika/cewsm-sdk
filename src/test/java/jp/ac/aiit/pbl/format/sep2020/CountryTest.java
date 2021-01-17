@@ -16,4 +16,6 @@ public class CountryTest {
         public void canGetCountry764() { Assert.assertThat(Country.THAILAND,is(Country.getById("764")));}
         @Test
         public void canGetCountry894() { Assert.assertThat(Country.ZAMBIA,is(Country.getById("894")));}
+        @Test
+        public void canGetCountry99999() { Assert.assertThat(null,is(Country.getById("99999")));}
     }

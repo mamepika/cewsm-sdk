@@ -48,5 +48,9 @@ public class EventTest {
         Assert.assertThat("Presence of hazardous chemical materials that present a risk or potential risk to the health of humans, animals, plants, or the environment",is(event.getDefinition1()));
         Assert.assertThat("",is(event.getDefinition2()));
     }
+    @Test
+    public void canGetEvent9999999999999() {
+        Assert.assertThat(null,is(Event.getById("9999999999999")));
+    }
 
 }
