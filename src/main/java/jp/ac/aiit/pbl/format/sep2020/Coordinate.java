@@ -10,7 +10,7 @@ public class Coordinate {
             throw new IllegalArgumentException();
         }
         long intervalNumber = Long.parseLong(intervalString,2);
-        return -180.00 + intervalNumber * interval;
+        return intervalNumber == 131071 ? 180.00 : -180.00 + intervalNumber * interval;
     }
 
     public static Double calcLatitude(String intervalString){
@@ -18,6 +18,6 @@ public class Coordinate {
             throw new IllegalArgumentException();
         }
         long intervalNumber = Long.parseLong(intervalString,2);
-        return -90.00 + intervalNumber * interval;
+        return intervalNumber == 65535 ? 90.00 : -90.00 + intervalNumber * interval;
     }
 }
