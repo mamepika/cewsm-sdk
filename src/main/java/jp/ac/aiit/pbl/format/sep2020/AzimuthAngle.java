@@ -7,7 +7,7 @@ public class AzimuthAngle {
     private Double value;
 
     public AzimuthAngle(String intervalString){
-        this.value = (double)Math.round(interval * Long.parseLong(intervalString,2) * 100 /100);
+        this.value = interval * Long.parseLong(intervalString,2);
     }
 
     public Double value(){
