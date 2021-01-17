@@ -13,11 +13,6 @@ public class CoordinateTest {
     }
 
     @Test
-    public void latitudeCaseOf1111111000000101(){
-        assertThat(Coordinate.calcLatitude("1111111000000101"),is(88.610));
-    }
-
-    @Test
     public void maximumLatitude(){
         assertThat(Coordinate.calcLatitude("1111111111111111"),is(90.0));
     }
