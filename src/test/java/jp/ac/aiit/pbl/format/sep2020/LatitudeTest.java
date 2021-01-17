@@ -1,20 +1,22 @@
 package jp.ac.aiit.pbl.format.sep2020;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.is;
 
 public class LatitudeTest {
 
     @Test
-    public void inCaseOfMinus90(){
+    public void inCaseOfMinimumValue(){
         Latitude latitude = new Latitude("0000000000000000");
-        System.out.println(latitude.value());
+        Assert.assertThat(-90.0, is(latitude.value()));
     }
-    
+
     @Test
-    public void inCaseOf90(){
+    public void inCaseOfMaximumValue(){
         Latitude latitude = new Latitude("1111111111111111");
-        System.out.println(latitude.value());
+        Assert.assertThat(89.99843100000001, is(latitude.value()));
     }
 }
