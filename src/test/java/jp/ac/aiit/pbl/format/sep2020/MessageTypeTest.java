@@ -16,4 +16,6 @@ public class MessageTypeTest {
     public void canGetMessageType10() { Assert.assertThat(MessageType.TEST,is(MessageType.getById("10")));}
     @Test
     public void canGetMessageType11() { Assert.assertThat(MessageType.CANCEL,is(MessageType.getById("11")));}
+    @Test
+    public void canGetMessageType99() { Assert.assertThat(null,is(MessageType.getById("99")));}
 }
