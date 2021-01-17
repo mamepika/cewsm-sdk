@@ -15,7 +15,7 @@ public class Guidance {
         if(this.countryId.equals("392") && this.guidanceLibrary.equals("1")){
             return GeneralGuidanceToReact.getById(id);
         }else{
-            return  GeneralGuidanceToReact.getById(id);
+            return GeneralGuidanceToReact.getById(id);
         }
     }
 }

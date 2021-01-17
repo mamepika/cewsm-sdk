@@ -10,16 +10,21 @@ public class AzimuthAngleTest {
     @Test
     public void inCaseOfMinimumValue(){
         AzimuthAngle azimuthAngle = new AzimuthAngle("00000");
-        Assert.assertThat(0.00, is(azimuthAngle.value()));
+        assertThat(0.00, is(azimuthAngle.value()));
     }
     @Test
     public void inCaseOfMediumValue(){
         AzimuthAngle azimuthAngle = new AzimuthAngle("10000");
-        Assert.assertThat(92.9032, is(azimuthAngle.value()));
+        assertThat(92.90, is(azimuthAngle.value()));
+    }
+
+    @Test
+    public void inCaseOf01100(){
+        assertThat(69.68, is(new AzimuthAngle("01100").value()));
     }
     @Test
     public void inCaseOfMaximumValue(){
         AzimuthAngle azimuthAngle = new AzimuthAngle("11111");
-        Assert.assertThat(179.99994999999998, is(azimuthAngle.value()));
+        assertThat(180.0, is(azimuthAngle.value()));
     }
 }
