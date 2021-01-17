@@ -2,13 +2,13 @@ package jp.ac.aiit.pbl.format.sep2020;
 
 public class SemiMajorAxisLength {
 
-    private Double value;
+    private long value;
 
     public SemiMajorAxisLength(String axis){
         this.value = AxisLength.getById(axis).getLength();
     }
 
-    public Double value(){
+    public long value(){
         return value;
     }
 }
