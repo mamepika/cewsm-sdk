@@ -23,7 +23,7 @@ public class CommonEWSMessageDecoderTest {
     }
 
     @Test(expected = NumberFormatException.class)
-    public void FromHexToBynaryException() {
+    public void FromHexToBinaryException() {
         CommonEWSMessageDecoder decoder = new CommonEWSMessageDecoder(CommonEWSMessageFormat.SEPTEMBER2020);
         decoder.decode("C6Bあ620あ00B18200B2BDE363198000004000000000000000000000004000004");
     }
