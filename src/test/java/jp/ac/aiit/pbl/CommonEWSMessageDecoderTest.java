@@ -11,14 +11,12 @@ public class CommonEWSMessageDecoderTest {
     @Test
     public void decodeTestWithSignalA() {
         CommonEWSMessageDecoder decoder = new CommonEWSMessageDecoder(CommonEWSMessageFormat.SEPTEMBER2020);
-        System.out.println();
         System.out.println(decoder.decode("9AB0620188B10200B2A2E3602A8000004000000000000000000000004000004"));
     }
 
     @Test
     public void decodeTestWithSignalB() {
         CommonEWSMessageDecoder decoder = new CommonEWSMessageDecoder(CommonEWSMessageFormat.SEPTEMBER2020);
-        System.out.println();
         System.out.println(decoder.decode("C6B0620000B18200B2BDE363198000004000000000000000000000004000004"));
     }
 
