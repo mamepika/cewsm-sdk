@@ -31,6 +31,7 @@ public class EWSSeptember2020 implements CommonEWSMessage {
 
     private AzimuthAngle azimuthAngle;
 
+    @Override
     public Prefix getPrefix() {
         return prefix;
     }
