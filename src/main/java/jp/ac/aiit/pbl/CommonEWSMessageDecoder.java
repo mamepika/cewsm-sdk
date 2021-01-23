@@ -16,9 +16,7 @@ public class CommonEWSMessageDecoder {
         this.parser = EWSMessageParserFactory.create(format);
     }
 
-    public CommonEWSMessage decode(String commonEWSMessage){
-        //TODO
-        //Handling exception
+    public CommonEWSMessage decode(String commonEWSMessage) throws IllegalArgumentException{
         return this.parser.parse(toBinaryString(commonEWSMessage));
     }
 
