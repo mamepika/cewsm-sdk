@@ -2,6 +2,7 @@ package jp.ac.aiit.pbl.format.sep2020;
 
 import jp.ac.aiit.pbl.format.CommonEWSMessage;
 import jp.ac.aiit.pbl.format.EWSMessageParser;
+import jp.ac.aiit.pbl.format.prefix.Prefix;
 import jp.ac.aiit.pbl.format.prefix.PrefixParser;
 
 import java.text.Normalizer;
@@ -51,8 +52,7 @@ public class EWSSeptember2020Parser implements EWSMessageParser {
 
     public CommonEWSMessage parse(String ewsCommonMessage){
         EWSSeptember2020 september2020 = new EWSSeptember2020();
-        PrefixParser prefixParser = new PrefixParser();
-        september2020.setPrefix(prefixParser.parse(ewsCommonMessage));
+        september2020.setPrefix(readPrefix(ewsCommonMessage));
         String message = ewsCommonMessage.substring(14);
         september2020.setMessageType(MessageType.getById(Format.MESSAGE_TYPE.signalValue(message)));
         september2020.setCountry(Country.getById(Integer.toString(Integer.parseInt(Format.COUNTRY.signalValue(message),2))));
@@ -70,5 +70,14 @@ public class EWSSeptember2020Parser implements EWSMessageParser {
         september2020.setSemiMinorAxisLength(new SemiMinorAxisLength(Format.SEMI_MINOR_AXIS_LENGTH.signalValue(message)));
         september2020.setAzimuthAngle(new AzimuthAngle(Format.SEMI_MAJOR_AXIS_AZIMUTH_ANGLE.signalValue(message)));
         return september2020;
+    }
+
+    private Prefix readPrefix(String ewsCommonMessage){
+        PrefixParser prefixParser = new PrefixParser();
+        Prefix prefix = prefixParser.parse(ewsCommonMessage);
+        if(prefix.getMessageType().equals(jp.ac.aiit.pbl.format.prefix.MessageType.MT43)){
+            throw new IllegalArgumentException("this method is only MT44");
+        }
+        return prefix;
     }
 }
